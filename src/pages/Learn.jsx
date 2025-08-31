@@ -18,7 +18,7 @@ export default function Learn() {
 
   const [cards, setCards] = useState(emotions);
 
-  // rotate slowly every 9s
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCards((prev) => [...prev.slice(-1), ...prev.slice(0, -1)]);
@@ -36,7 +36,7 @@ export default function Learn() {
       </h1>
       
 
-      {/* Grid with smooth animation */}
+     
       <div className="grid grid-cols-2 gap-6 mt-10 max-w-3xl mx-auto">
         {cards.map((card) => (
           <motion.div
@@ -57,7 +57,7 @@ export default function Learn() {
         ))}
       </div>
 
-      {/* --- Book-style Article Section --- */}
+   
       <div className="mt-16 max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-center font-['Fredoka_One'] text-[#9400d3] mb-6">Explore Emotions in Stories 📖</h2>
         <BookArticle />

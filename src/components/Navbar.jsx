@@ -27,12 +27,11 @@ export default function Navbar() {
         scrolled ? "bg-white/70 backdrop-blur-md shadow-md" : ""
       }`}
     >
-      {/* Logo */}
+     
       <h2 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent drop-shadow-md">
         MoodVerse
       </h2>
 
-      {/* Desktop Nav */}
       <nav className="hidden md:flex space-x-8 text-lg">
         {navItems.map((item) => (
           <Link
@@ -45,7 +44,7 @@ export default function Navbar() {
         ))}
       </nav>
 
-      {/* Mobile Hamburger */}
+     
       <button
         className="md:hidden p-2 text-gray-700"
         onClick={() => setMenuOpen(!menuOpen)}
@@ -53,7 +52,7 @@ export default function Navbar() {
         {menuOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
-      {/* Mobile Menu Slide-in */}
+    
       {menuOpen && (
         <motion.div
           initial={{ x: "100%" }}

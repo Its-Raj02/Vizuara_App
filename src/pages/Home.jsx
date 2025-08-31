@@ -7,15 +7,13 @@ export default function Home() {
       className="relative w-full min-h-screen overflow-hidden pt-24 bg-cover bg-center"
       style={{ backgroundImage: "url('/rf.jpg')" }} // ← इथे background image path
     >
-      {/* Hero Content */}
+
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-12">
-        
-        {/* Left Text Section */}
         <div className="max-w-xl text-center md:text-left ml-10 -mt-30">
           <motion.h1
  className="text-5xl font-extrabold text-transparent bg-clip-text
-               bg-gradient-to-r from-[#0B3D91] font-['Fredoka_One'] via-[#008BFF] to-[#FF1493]
-              "
+               bg-gradient-to-r from-[#0B3D91] font-['Fredoka_One'] via-[#008BFF] to-[#FF1493]"
+              
   initial={{ opacity: 0, y: 50, scale: 0.8 }}
   animate={{ opacity: 1, y: 0, scale: 1.05 }}
   transition={{
@@ -36,13 +34,11 @@ export default function Home() {
   animate={{ opacity: 1, y: 0 }}    
   transition={{ delay: 0.5, duration: 1 }}
 >
-  Discover how AI understands happiness, sadness & more — through fun
+  Discover how to understands happiness, sadness & more — through fun
   exercises, stories, and interactive games.
 </motion.p>
           
         </div>
-
-        {/* Right Panda Image */}
         <motion.img
           src="/w.png"
           alt="Cute Panda"
