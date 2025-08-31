@@ -10,6 +10,7 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 const app = express();
@@ -126,6 +127,5 @@ app.use((req, res) => {
   res.sendFile(path.join(distPath, "index.html"));
 });
 
-app.listen(5000, () => {
-  console.log("✅ Backend with Gemini running on port 5000");
-});
+
+app.listen(PORT, () => console.log(`✅ Backend with Gemini running on port ${PORT}`));
